@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Main Test " parallel="tests">
+  <test name="TestNG">
+    <classes>
+      <class name="testng.SuccessfulAdPast"/>
+      <class name="testng.AdPostComputerService"/>
+      <class name="testng.AdPostOtherService"/>
+      <class name="testng.AdPostLegalServices"/>
+      <class name="testng.AdPostHealthService"/>
+      <class name="testng.AdPostEventService"/>
+      <class name="testng.AdPostClassesOtherClasses"/>
+      <class name="testng.AdPostAutomotiveServices"/>
+    </classes>
+  </test> <!-- TestNG -->
+</suite> <!-- Main Test  -->

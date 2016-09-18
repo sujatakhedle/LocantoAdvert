@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="none">
+  <test name="Test(failed)" parallel="none">
+    <classes>
+      <class name="testng.AdPostOtherService">
+        <methods>
+          <include name="testAdPostOtherService"/>
+          <include name="precondition"/>
+        </methods>
+      </class> <!-- testng.AdPostOtherService -->
+      <class name="testng.AdPostAutomotiveServices">
+        <methods>
+          <include name="testAdPostAutomotiveServices"/>
+        </methods>
+      </class> <!-- testng.AdPostAutomotiveServices -->
+      <class name="testng.AdPostClassesOtherClasses">
+        <methods>
+          <include name="testAdPostClassesOtherClasses"/>
+        </methods>
+      </class> <!-- testng.AdPostClassesOtherClasses -->
+      <class name="testng.AdPostLegalServices">
+        <methods>
+          <include name="testAdPostLegalServices"/>
+        </methods>
+      </class> <!-- testng.AdPostLegalServices -->
+      <class name="testng.AdPostHealthService">
+        <methods>
+          <include name="testAdPostHealthService"/>
+        </methods>
+      </class> <!-- testng.AdPostHealthService -->
+      <class name="testng.AdPostEventService">
+        <methods>
+          <include name="testAdPostEventService"/>
+        </methods>
+      </class> <!-- testng.AdPostEventService -->
+      <class name="testng.SuccessfulAdPast">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+        </methods>
+      </class> <!-- testng.SuccessfulAdPast -->
+      <class name="testng.AdPostComputerService">
+        <methods>
+          <include name="postcondition"/>
+          <include name="precondition"/>
+        </methods>
+      </class> <!-- testng.AdPostComputerService -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
