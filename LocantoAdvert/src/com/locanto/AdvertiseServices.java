@@ -6,9 +6,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class AdvertiseServices {
+public class AdvertiseServices
+{
 	
-		
 		@FindBy(id="post_type_2")
 		private WebElement Adtype;
 		
@@ -58,14 +58,14 @@ public class AdvertiseServices {
 		{
 			
 
-			Adtype.click();
+		Adtype.click();
 			
-			Title.sendKeys(data[0]);
+		Title.sendKeys(data[0]);
 			
-			Description.sendKeys(data[1]);
+		Description.sendKeys(data[1]);
 			
-			Tagbox1.sendKeys(data[2]);
-			Thread.sleep(1000);
+		Tagbox1.sendKeys(data[2]);
+		Thread.sleep(1000);
 	        Tagbox1.sendKeys(Keys.TAB);
 	        
 	        
@@ -77,8 +77,6 @@ public class AdvertiseServices {
 	        Thread.sleep(1100);
 	       
 	        Tagbox3.sendKeys(Keys.TAB);
-	        
-	        //image ..................
 	        
 	        Website.sendKeys(data[5]);
 	        
@@ -93,9 +91,9 @@ public class AdvertiseServices {
 	        PostalCode.clear();
 	        PostalCode.sendKeys(data[9]);
 	       
-			PostyourAd.click();
-		}
-	}
+		PostyourAd.click();
+	       }
+  }
 
 
 	
