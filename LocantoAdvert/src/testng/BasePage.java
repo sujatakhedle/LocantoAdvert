@@ -8,26 +8,24 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 
-public class BasePage {
-public WebDriver driver;
-
-@BeforeMethod
-public void precondition()
+public class BasePage
 {
-driver =new FirefoxDriver();
-driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
-driver.manage().window().maximize();
-driver.get("http://bangalore.locanto.in/");
+  public WebDriver driver;
 
+  @BeforeMethod
+  public void precondition()
+  {
+  driver =new FirefoxDriver();
+  driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
+  driver.manage().window().maximize();
+  driver.get("http://bangalore.locanto.in/");
+  driver.findElement(By.xpath("//span[text()='Post free ad']")).click();
+  }
 
-driver.findElement(By.xpath("//span[text()='Post free ad']")).click();
-
-}
-
-@AfterMethod
-public void postcondition()
-{
-	driver.close();
+  @AfterMethod
+  public void postcondition()
+  {
+   driver.close();
   }
 }
 
