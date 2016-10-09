@@ -7,15 +7,14 @@ import com.locanto.AdvertiseServices;
 import com.locanto.BoostYourSuccess;
 import com.locanto.FreeHealthServices;
 import com.locanto.LoginPage;
-
 import generic.ReadFromExcel;
 
-public class AdPostHealthService extends BasePage {
-
+public class AdPostHealthService extends BasePage
+{
 	@Test
 	
-	public void testAdPostHealthService() throws Exception{
-		
+	public void testAdPostHealthService() throws Exception
+	{	
 		FreeHealthServices HL=new FreeHealthServices(driver);
 		HL.ClickHealthService();
 		
@@ -25,26 +24,21 @@ public class AdPostHealthService extends BasePage {
 		AdvertiseServices AD= new AdvertiseServices(driver);
 		String xlFile = "./excelfiles/Data.xlsx";
 		String xlSheet="AdForm";
-		int rc=ReadFromExcel.getRowCount(xlFile, xlSheet);
-		int cc=ReadFromExcel.getCellCount(xlFile, xlSheet,0);
-		
-		 Reporter.log(rc+" " , true);
-		
-		 
-	    for(int i=15; i<=17; i++){
-	    	
-			String[] data= ReadFromExcel.readRow(xlFile, xlSheet, i, cc);
-		
-		AD.enterData(data);
+		int cc=ReadFromExcel.getCellCount(xlFile, xlSheet,0); 
+	        for(int i=15; i<=17; i++)
+	        {
+	        String[] data= ReadFromExcel.readRow(xlFile, xlSheet, i, cc);
+	        AD.enterData(data);
 		
 		BoostYourSuccess BS= new BoostYourSuccess(driver);
 		BS.ClickproceedButton();
+		
 		driver.navigate().back();
 		driver.navigate().back();
 		}
 	    	
-		 }
-	}
+        }
+}
 	
 		
 	
