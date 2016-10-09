@@ -20,7 +20,8 @@ public class LoginPage
 	@FindBy(xpath="//button[contains(text(),'Log In ')]")
 	private WebElement LoginButton;
 	
-	public LoginPage(WebDriver driver){
+	public LoginPage(WebDriver driver)
+	{
 		PageFactory.initElements(driver, this);
 	}
 	public void Login(String mail, String pwd)
@@ -29,7 +30,6 @@ public class LoginPage
 		passward.sendKeys(pwd);
 		StayCheckBox.click();
 		LoginButton.click();
-		
 	}
 
 }
