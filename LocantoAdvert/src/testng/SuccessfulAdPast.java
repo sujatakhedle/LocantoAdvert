@@ -8,19 +8,13 @@ import com.locanto.AdvertiseServices;
 import com.locanto.BoostYourSuccess;
 import com.locanto.FreeClassifiedPage;
 import com.locanto.LoginPage;
-
-
 import generic.ReadFromExcel;
 
-public class SuccessfulAdPast extends BasePage {
-	
-	
-
+public class SuccessfulAdPast extends BasePage 
+{
 	@Test  
 	public void testsuccessAdPost() throws Exception 
 	{
-		
-		
 		FreeClassifiedPage HS=new FreeClassifiedPage(driver);
 		driver.manage().timeouts().implicitlyWait(80, TimeUnit.SECONDS);
 		HS.ClickHomeService();
@@ -32,26 +26,19 @@ public class SuccessfulAdPast extends BasePage {
 	
 		AdvertiseServices AD= new AdvertiseServices(driver);
 		String xlFile = "./excelfiles/Data.xlsx";
-		String xlSheet="AdForm";
-		//int rc=ReadFromExcel.getRowCount(xlFile, xlSheet); 
+		String xlSheet="AdForm"; 
 		int cc=ReadFromExcel.getCellCount(xlFile, xlSheet,0);
-		
-	 
-		
-		 for(int i=1; i<=9; i++)
-		
-	      { 
-		
-		String[] data= ReadFromExcel.readRow(xlFile, xlSheet, i, cc);
-		    
-		 AD.enterData(data);
+		for(int i=1; i<=9; i++)
+	        { 
+		String[] data= ReadFromExcel.readRow(xlFile, xlSheet, i, cc);    
+	        AD.enterData(data);
 	      
-		 BoostYourSuccess BS= new  BoostYourSuccess(driver);
-		 BS.ClickproceedButton();
+		BoostYourSuccess BS= new  BoostYourSuccess(driver);
+		BS.ClickproceedButton();
 		
 		driver.navigate().back();
 		driver.navigate().back();
-			}
-	     }
-      }
+		}
+	  }
+}
 
